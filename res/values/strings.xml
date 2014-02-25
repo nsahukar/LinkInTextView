@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LinkInTextView</string>
+    <string name="action_settings">Settings</string>
+    <string name="method1">
+        <![CDATA[
+        <h4>Method 1</h4>
+        <p>
+        This method uses <b>SpannableString</b> along with <b>ClickableSpan</b>.
+        This is not a very neat implementation of the requirement. But it WORKS!
+        The only drawback in this method is not with functionality, but miniscule 
+        (rather negligible) effort required in spanning the text in the string 
+        accurately. You do that fine. That\'s it. You are good to go. For example, 
+        you can click here to open an activity. You can do anything, I\'ve opened an 
+        activity. :-)
+        </p>
+        <p>
+        As a corollary, you can also use <b>URLSpan</b> instead of <b>ClickableSpan</b>.
+        But it requires you to mandatory open an activity on click event. So above 
+        method is more generic.
+        </p>
+        ]]>
+    </string>
+    <string name="method2">
+        <![CDATA[
+        <h4>Method 2</h4>
+        <p>
+        This method is functionally similar to the corollary mentioned above. In this
+        method, the target activity listen to <b>ACTION_VIEW intents</b>, and specifically 
+        those with the <b><i>scheme</i></b> mentioned in intent filter for target activity. 
+        (Check manifest file for more information).
+        </p>
+        <p>
+        As an example, <a href="com.dev.nik.Method2Activity://">Click</a> here to open 
+        another activity. Check the strings.xml file for the scheme mentioned in the 
+        <i>a</i> tag.
+        </p>
+        <p>So as a conclusion, you get generalism in Method 1, while you get perfection
+        in Method 2. Hope this helps... :-)
+        </p>
+        ]]>
+    </string>
+    
+	<string name="content1">You have reached this activity via method 1.</string>
+	<string name="content2">You have reached this activity via method 2.</string>
+</resources>
